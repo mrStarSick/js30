@@ -1,0 +1,167 @@
+/*CSS lightMode*/
+
+@font-face {
+    font-family: "BlowBrush";
+    src: url("./assets/fonts/blowbrush.otf");
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'blowbrush';
+    background: linear-gradient(to bottom, #4B4E6D, #99969e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    text-shadow: 1px 2px 2px rgb(255, 255, 200);
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to right, #84DCC6, rgb(255, 255, 200));
+    border-radius: 50%;
+    border: 15px solid #95A3B3;
+    position: relative;
+    -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.2, transparent), to( #99969e));
+}
+
+.clock .number {
+    --rotation: 0;
+    color: rgb(110, 90, 100);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+}
+
+.clock .number1 {
+    --rotation: 30deg;
+}
+
+.clock .number2 {
+    --rotation: 60deg;
+}
+
+.clock .number3 {
+    --rotation: 90deg;
+}
+
+.clock .number4 {
+    --rotation: 120deg;
+}
+
+.clock .number5 {
+    --rotation: 150deg;
+}
+
+.clock .number6 {
+    --rotation: 180deg;
+}
+
+.clock .number7 {
+    --rotation: 210deg;
+}
+
+.clock .number8 {
+    --rotation: 240deg;
+}
+
+.clock .number9 {
+    --rotation: 270deg;
+}
+
+.clock .number10 {
+    --rotation: 300deg;
+}
+
+.clock .number11 {
+    --rotation: 330deg;
+}
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(110, 90, 100);
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock .hand.second {
+    width: 5px;
+    height: 45%;
+    background-color: #f5c979;
+}
+
+.clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    background-color: rgb(110, 90, 100);
+}
+
+.clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: rgb(110, 90, 100);
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    color: rgb(110, 90, 100);
+    margin-bottom: 20px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    background: linear-gradient(to right, #84DCC6, rgb(255, 255, 200));
+    border: 6px solid #95A3B3;
+    border-radius: 25px;
+    box-shadow: 0.1px 0.1px 50px rgb(255, 255, 200);
+}
+
+
+/*☼ ☽*/
+
+.button {
+    display: flex;
+    justify-content: center;
+    color: rgb(124, 103, 114);
+    border: 30px solid white;
+    margin-top: 300px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    background: linear-gradient(to right, #84DCC6, rgb(255, 255, 200));
+    border: 6px solid #95A3B3;
+    border-radius: 25px;
+    box-shadow: 0.1px 0.1px 20px rgb(255, 255, 234);
+}
+
+.button:hover {
+    opacity: 0.25;
+    cursor: pointer;
+}
